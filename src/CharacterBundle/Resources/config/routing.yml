@@ -1,0 +1,7 @@
+character_homepage:
+    path:     /
+    defaults: { _controller: CharacterBundle:Default:index }
+
+persona_show:
+    path:     /{personaId}
+    defaults: { _controller: CharacterBundle:Persona:show }

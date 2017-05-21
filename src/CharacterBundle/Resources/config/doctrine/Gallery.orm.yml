@@ -1,0 +1,32 @@
+CharacterBundle\Entity\Gallery:
+    type: entity
+    table: null
+    repositoryClass: CharacterBundle\Repository\GalleryRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        image:
+            type: string
+            length: 255
+        tags:
+            type: text
+            nullable: true
+        notes:
+            type: text
+            nullable: true
+        galleryName:
+            type: string
+            length: 255
+            nullable: true
+    manyToOne:
+        persona:
+          targetEntity: Persona
+          inversedBy: galleries
+          joinColumn:
+            name: persona_id
+            referencedColumnName: id
+    lifecycleCallbacks: {  }

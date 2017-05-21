@@ -1,0 +1,22 @@
+CharacterBundle\Entity\Persona:
+    type: entity
+    table: null
+    repositoryClass: CharacterBundle\Repository\PersonaRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        title:
+            type: string
+            length: 255
+        age:
+            type: integer
+            nullable: true
+    oneToMany:
+        galleries:
+            targetEntity: Gallery
+            mappedBy: persona    
+    lifecycleCallbacks: {  }

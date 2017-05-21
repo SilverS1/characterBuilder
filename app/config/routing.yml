@@ -1,0 +1,7 @@
+character:
+    resource: "@CharacterBundle/Resources/config/routing.yml"
+    prefix:   /persona
+
+app:
+    resource: '@AppBundle/Controller/'
+    type: annotation
